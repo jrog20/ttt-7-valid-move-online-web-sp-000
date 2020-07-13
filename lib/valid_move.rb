@@ -1,13 +1,11 @@
 # code your #valid_move? method here
 
 def valid_move?(board, index)
-  
-  # move is not vacant and/or present on the game board  
-  elsif board[index] < 0 || board[index] > 8
+  # move is not present on the game board  
+  if board[index] < 0 || board[index] > 8
     puts "You must move to a position within the tic-tac-toe board"
-  else position_taken?
+  elsif position_taken?
     puts "The position must be vacant, not currently taken by a player"
-    
     # position must be vacant AND move must be present on the game board
   else board[index].between?(0, 8) && position_taken? == false
     true
