@@ -2,7 +2,7 @@
 
 def valid_move?(board, index)
   # move is not present on the game board  
-  if board[index] < 0 || board[index] > 8
+  if board[index] < "0" || board[index] > 8
     puts "You must move to a position within the tic-tac-toe board"
   elsif position_taken?
     puts "The position must be vacant, not currently taken by a player"
