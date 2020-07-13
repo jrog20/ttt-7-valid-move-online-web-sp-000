@@ -2,7 +2,7 @@
 
 def valid_move?(board, index)
   # position is vacant AND move is present on the game board
-  if index.between?(0, 8) && position_taken? == false
+  if index.between?(0, 8) && position_taken?(board, index) == false
     true
     puts "good move"
   # move is not present on the game board  
